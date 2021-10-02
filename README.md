@@ -20,12 +20,11 @@ img-hdp-hadoop
 1. Скачаем датасет ppkm_sentiment, размеченный эмоциональной окраской отзывов
 индонезийской компании PPKM
 2. Поместим его в контейнер:
-
 docker cp archive.zip gbhdp:/home/hduser
 3. Распакуем:
-$ unzip archive.zip -d ppkm
-$ rm archive.zip
+unzip archive.zip -d ppkm
+rm archive.zip
 4. Копируем директорию в hdfs:
-$ hdfs dfs -put ppkm /user/hduser/
+hdfs dfs -put ppkm /user/hduser/
 5. Проверим, что файлы в hdfs:
-$ hdfs dfs -ls /user/hduser/ppkm
+hdfs dfs -ls /user/hduser/ppkm
