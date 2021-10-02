@@ -14,11 +14,14 @@ docker run -it --name gbhdp \
 -p 4044:4044 \
 --hostname localhost \
 img-hdp-hadoop
-СБОРКА ОБРАЗА
+
+## СБОРКА ОБРАЗА
+
 1. Скачаем датасет ppkm_sentiment, размеченный эмоциональной окраской отзывов
 индонезийской компании PPKM
 2. Поместим его в контейнер:
-# docker cp archive.zip gbhdp:/home/hduser
+
+docker cp archive.zip gbhdp:/home/hduser
 3. Распакуем:
 $ unzip archive.zip -d ppkm
 $ rm archive.zip
